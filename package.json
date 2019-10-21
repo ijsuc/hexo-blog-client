@@ -1,0 +1,111 @@
+{
+  "name": "hexo-blog-client",
+  "version": "1.2.9",
+  "private": true,
+  "description": "Hexo桌面客户端",
+  "author": {
+    "name": "rain",
+    "email": "991923257@qq.com",
+    "url": "https://www.onlystar.site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xonlystar/hexo-vue-client.git"
+  },
+  "homepage": "https://github.com/Xonlystar/hexo-vue-client.git",
+  "license": "Apache License, Version 2.0",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service electron:serve",
+    "build": "vue-cli-service electron:build",
+    "lint": "vue-cli-service lint",
+    "lint:style": "stylelint '**/*.+(scss|vue)'",
+    "vue:serve": "vue-cli-service serve",
+    "vue:build": "vue-cli-service build",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "ali-oss": "^6.1.1",
+    "axios": "^0.19.0",
+    "electron-builder": "^21.2.0",
+    "electron-google-analytics": "^0.1.0",
+    "electron-store": "^2.0.0",
+    "element-ui": "^2.8.2",
+    "fix-path": "^2.1.0",
+    "hexo": "^3.8.0",
+    "little-git": "^1.113.0",
+    "macaddress": "^0.2.9",
+    "mavon-editor": "^2.7.4",
+    "qiniu": "^7.2.1",
+    "vue": "^2.6.6",
+    "vue-i18n": "^8.0.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "when": "^3.7.8"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.0.4",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-standard": "^3.0.5",
+    "aws-sdk": "^2.414.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-env": "^1.7.0",
+    "electron": "^4.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-electron-builder": "^1.0.2",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-cli-plugin-i18n": "^0.5.2",
+    "vue-template-compiler": "^2.5.21",
+    "stylelint": "^10.0.1",
+    "fs-css-order": "^0.0.3",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "plugins": [
+      "vue"
+    ],
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-console": "off",
+      "no-debugger": "off",
+      "no-unsafe-finally": "off",
+      "no-undef": "off",
+      "no-unused-vars": [
+        "warn",
+        {
+          "vars": "all",
+          "args": "none"
+        }
+      ]
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "main": "background.js",
+  "__npminstall_done": false
+}
